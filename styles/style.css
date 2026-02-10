@@ -1,1 +1,140 @@
+:root {
+    /* 60% — background */
+    --light-text: #ff71ad;
 
+    /* 30% — primary actions and supporting surfaces) */
+    --primary: #15214e;
+    --secondary: #553772;
+
+    /* 10% — accent for emphasis and interaction */
+    --accent: #8f3b76;
+
+    /* Button border widths */
+    --btn-border-width: 3px;
+    --btn-border-width-hover: 5px;
+}
+
+/* --------------------------------------------------
+* Base page styles
+* --------------------------------------------------
+*
+* The dominant (60%) colour establishes a clean canvas for the page.
+*/
+body {
+    background-color: var(--light-text);
+    color: var(--primary);
+}
+
+/* --------------------------------------------------
+* Bootstrap utility class: .bg-info
+* --------------------------------------------------
+*
+* Overriding .bg-info applies the secondary (30%) colour used in navbar.
+* This small change creates a major visual shift, demonstrating the 20/80 rule.
+*
+* !important is used because Bootstrap utility classes
+* are designed to take priority.
+*/
+.bg-info {
+    background-color: var(--secondary) !important;
+}
+
+/* --------------------------------------------------
+* Navbar (.navbar-light - text colour on light background)
+* --------------------------------------------------
+*
+* If the navbar is using .bg-info, we want the text complement it.
+*/
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/*
+* Accent colour is introduced only on hover and focus on navbar elements,
+* keeping it within the 10% usage range.
+*/
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+    color: var(--accent);
+}
+
+/* --------------------------------------------------
+* Button: .btn-info
+* --------------------------------------------------
+*  
+* Uses secondary (30%) color used in the call-to-action buttons, 
+* with a border to add visual interest without overwhelming the design.
+*/
+.btn-info {
+    color: var(--light-text);
+    background-color: var(--secondary);
+    border-color: var(--primary);
+    border-width: var(--btn-border-width);
+}
+
+/*
+* OPTIONAL: Hover/focus for desktop users - progressive enhancement
+* A thicker accent-colored border adds visual feedback without 
+* changing the button's core color scheme.
+*/
+.btn-info:hover,
+.btn-info:focus {
+    background-color: var(--secondary);
+    border-color: var(--accent);
+    border-width: var(--btn-border-width-hover);
+}
+.navbar-brand{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* Style for radio button labels when not selected */
+.btn-outline-primary {
+    color: #553772; /* Dark green text color for contrast */
+    border-color: #15214e; /* Light green border color */
+}
+
+/* Style for radio button labels on hover or focus */
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+    color: #f2fbf2; /* Lightest color for text */
+    background-color: #15214e; /* Light green background */
+    border-color: #553772; /* Dark green border for emphasis */
+}
+
+/* Style for the active (checked) radio button label */
+.btn-check:checked + .btn-outline-primary, .btn-check:active + .btn-outline-primary {
+    color: #f2fbf2; /* Lightest color for text */
+    background-color: #553772; /* Dark green background for primary action */
+    border-color: #b75858; /* Reddish-brown border to use as accent */
+}
+
+/* Style for the dropdown button */
+.btn-secondary {
+    color: #f2fbf2; /* Lightest color for text */
+    background-color: #553772; /* Dark green for the button background */
+    border-color: #553772; /* Light green for the button border */
+}
+
+/* Change dropdown button hover/focus styles */
+.btn-secondary:hover, .btn-secondary:focus {
+    color: #f2fbf2; /* Lightest color remains for text */
+    background-color: #8f3b76; /* Light green for background on hover/focus */
+    border-color: #553772; /* Dark green for border for emphasis */
+}
+
+/* Style for the dropdown menu */
+.dropdown-menu {
+    background-color: #f2fbf2; /* Lightest color for dropdown background */
+    border-color: #8f3b76; /* Light green for border color */
+}
+
+/* Style for dropdown items */
+.dropdown-item {
+    color: #15214e; /* Dark green for text color */
+}
+
+/* Style for dropdown item hover */
+.dropdown-item:hover, .dropdown-item:focus {
+    color: #f2fbf2; /* Lightest color for text on hover/focus */
+    background-color: #8f3b76; /* Light green for background on hover/focus */
+}
